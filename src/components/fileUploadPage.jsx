@@ -44,7 +44,7 @@ const FileUploadPage = ({ messages, sendMessage, setUrl }) => {
         {fileUploaded && (
           <div>
             {setUrl(
-              `http://127.0.0.1:8000/api/v1/query/pdf/${filename}/1/${session_id}`
+              `http://192.168.32.15:8005/api/v1/query/pdf/${filename}/1/${session_id}`
             )}
           </div>
         )}

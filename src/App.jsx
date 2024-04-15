@@ -45,7 +45,7 @@ const getMessageFromGenAI = async (user, url, setUrl) => {
 const DatabaseChatWindow = ({ messages, sendMessage, setUrl }) => {
   let session_id = localStorage.session_id;
   console.log(session_id);
-  setUrl(`http://127.0.0.1:8000/api/v1/sql-query/1/${session_id}`);
+  setUrl(`http://192.168.32.15:8005/api/v1/sql-query/1/${session_id}`);
   return (
     <div className="container flex flex-col items-center justify-center">
       <h1 className="text-3xl font-bold mb-4 md:mb-0 md:mt-8">
@@ -59,12 +59,12 @@ const DatabaseChatWindow = ({ messages, sendMessage, setUrl }) => {
 const App = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [url, setUrl] = useState("http://127.0.0.1:8000/api/v1/query/1/");
+  const [url, setUrl] = useState("http://192.168.32.15:8005/api/v1/query/1/");
   const location = useLocation();
   const navigate = useNavigate();
 
   const sendMessage = async (userInput) => {
-    // const response = await axios.get(`http://127.0.0.1:8000/api/v1/user/1/conversations`);
+    // const response = await axios.get(`http://192.168.32.15:8005/api/v1/user/1/conversations`);
 
     // const prevMessages = response.data.previous_chat;
 
