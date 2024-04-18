@@ -6,11 +6,9 @@ const UserInput = ({ sendMessage }) => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const inputRef = useRef(null);
-
   const handleSendMessage = async () => {
     setLoading(true);
     var inputMessage = input;
-    console.log(inputMessage);
     setInput("");
     await sendMessage(inputMessage);
     setLoading(false);

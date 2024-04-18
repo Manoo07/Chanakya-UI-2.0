@@ -17,8 +17,6 @@ const FileUploadPage = ({ messages, sendMessage, setUrl }) => {
   };
 
   const { filename, session_id } = localStorage;
-  console.log(filename, session_id);
-  console.log(localStorage.filename);
   return (
     <div className="w-full">
       <div className="flex flex-col justify-center items-center">
