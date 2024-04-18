@@ -12,7 +12,6 @@ class FileUpload extends React.Component {
     const formData = new FormData();
 
     formData.append('file', file);
-    console.log('filename',file.name) // Append the file to the FormData object
     // localStorage.setItem('filename',file.name)
     try {
       if (this.props.onStart) {
@@ -25,7 +24,6 @@ class FileUpload extends React.Component {
           'Content-Type': 'multipart/form-data', // Set content type to multipart/form-data
         },
       });
-      console.log('File uploaded successfully:', response.data);
       localStorage.setItem('filename', response.data.filename);
       if (this.props.onSuccess) {
         this.props.onSuccess(); // Call onSuccess callback if provided

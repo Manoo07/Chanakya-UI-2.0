@@ -41,8 +41,7 @@ function NavBar() {
             <li className={`p-2 ${location.pathname == '/' ? 'active-link':' text-white'}`}>
               <NavLink
                 to="/"
-                exact
-                activeClassName="active"
+                activeclassname="active"
                 onClick={() => handleNavLinkClick('Interact with Chanakya')}
                 className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent `}
               >
@@ -52,7 +51,7 @@ function NavBar() {
             <li className={`p-2 ${location.pathname == '/query/database' ? 'active-link':'text-white'}`}>
               <NavLink
                 to="/query/database"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={() => handleNavLinkClick('Query Database')}
                 className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent `}
 
@@ -63,7 +62,7 @@ function NavBar() {
             <li className={`p-2 ${location.pathname == '/query/pdf' ? 'active-link':'text-white'}`}>
               <NavLink
                 to="/query/pdf"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={() => handleNavLinkClick('Upload File')}
                 className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent  `}
               >

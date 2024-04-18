@@ -20,7 +20,6 @@ const MessageList = ({ messages, loading }) => {
               : "w-3/4 mx-auto mb-2 bg-gray-200 text-left"
           }`}
         >
-          {console.log(message)}
           <p
             className={`font-bold w-full ${
               message.type === "user" ? "text-blue-800" : "text-gray-800"

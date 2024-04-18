@@ -23,17 +23,12 @@ const getMessageFromGenAI = async (user, url, setUrl) => {
     const response = await axios.post(url, {
       user,
     });
-    console.log(user);
-    console.log(response.data.bot);
     const session_id = response.data.session_id;
     localStorage.setItem("session_id", session_id);
-    console.log(url);
     if (!url.includes(session_id)) {
       const newUrl = `${url}${session_id}`;
-      console.log(newUrl);
       setUrl(newUrl);
     }
-    console.log(url);
 
     return response.data.bot;
   } catch (error) {
@@ -67,8 +62,6 @@ const App = () => {
     // const response = await axios.get(`http://192.168.32.15:8005/api/v1/user/1/conversations`);
 
     // const prevMessages = response.data.previous_chat;
-
-    console.log(url);
 
     setLoading(true);
 
