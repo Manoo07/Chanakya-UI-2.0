@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios'; // Import Axios
 import fileIcon from '../assets/upload-file-svgrepo-com.svg';
-import {useState} from 'react' // Import the SVG file
 
 
 class FileUpload extends React.Component {

@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+  }
+  
+  .navbar.dark {
+    background-color: #1a202c;
+    border-color: #4a5568;
+  }
+  
+  .navbar .logo {
+    font-size: 2rem;
+  }
+  
+  .navbar .logo small {
+    font-size: 0.625rem;
+  }
+  
+  .navbar ul {
+    border: none;
+  }
+  
