@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "./components/Loader/Loader";
 import {
   Routes,
   Route,
-  Link,
   useLocation,
   useNavigate,
 } from "react-router-dom";
 import ChatWindow from "./components/ChatWindow";
 import FileUploadPage from "./components/fileUploadPage";
-import UploadButton from "./components/UploadButton";
-import QueryDbButton from "./components/QueryDbButton";
 import NavBar from "./components/NavBar";
 import LLMPage from "./components/LLMPage";
-
 
 
 
@@ -38,9 +34,12 @@ const getMessageFromGenAI = async (user, url, setUrl) => {
 };
 
 const DatabaseChatWindow = ({ messages, sendMessage, setUrl }) => {
-  let session_id = localStorage.session_id;
-  console.log(session_id);
-  setUrl(`http://192.168.32.15:8005/api/v1/sql-query/1/${session_id}`);
+  useEffect(() => {
+    let session_id = localStorage.session_id;
+    console.log(session_id);
+    setUrl(`http://192.168.32.15:8005/api/v1/sql-query/1/${session_id}`);
+  }, []);
+
   return (
     <div className="container flex flex-col items-center justify-center">
       <h1 className="text-3xl font-bold mb-4 md:mb-0 md:mt-8">
@@ -87,11 +86,6 @@ const App = () => {
       setMessages([]);
     }
   }, [location.pathname]);
-
-  const handleQueryDatabaseClick = () => {
-    navigate("/query/database");
-  };
-
   return (
     <>
     {loading && <Loader/>}
