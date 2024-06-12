@@ -37,7 +37,7 @@ const DatabaseChatWindow = ({ messages, sendMessage, setUrl }) => {
   useEffect(() => {
     let session_id = localStorage.session_id;
     console.log(session_id);
-    setUrl(`http://192.168.34.15:8005/api/v1/sql-query/1/${session_id}`);
+    setUrl(`http://192.168.34.30:8005/api/v1/sql-query/1/${session_id}`);
   }, []);
 
   return (
@@ -53,12 +53,12 @@ const DatabaseChatWindow = ({ messages, sendMessage, setUrl }) => {
 const App = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [url, setUrl] = useState("http://192.168.34.15:8005/api/v1/query/1/");
+  const [url, setUrl] = useState("http://192.168.34.30:8005/api/v1/query/1/");
   const location = useLocation();
   const navigate = useNavigate();
 
   const sendMessage = async (userInput) => {
-    // const response = await axios.get(`http://192.168.34.15:8005/api/v1/user/1/conversations`);
+    // const response = await axios.get(`http://192.168.34.30:8005/api/v1/user/1/conversations`);
 
     // const prevMessages = response.data.previous_chat;
 
